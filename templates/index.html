@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landslides detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/script.js"></script>
+  </head>
+  <body>
+	<h1 class="h1">Detection of Landslides</h1>
+    <div class="wrapper">
+        <input type="file" onchange="previewFile()"><br>
+        <div class="box">
+            <h3 id="beforetext"></h3>
+            <img src="" id="before" height="500">
+        </div>
+        <div class="box">
+            <h3 id="aftertext"></h3>
+            <img src="" id="after" height="500">
+        </div>
+        <div id="processbtn">
+            
+        </div>
+        <div id="gsibtn">
+            
+        </div>
+        <div id="linespacing">
+          <h4 id="linespacingtext"></h4>
+        </div>
+        <div id="rqd">
+          <h4 id="rqdtext"></h4>
+        </div>
+        <div id="gsi">
+          <h4 id="gsitext"></h4>
+        </div>
+        <div id="reloadbtn">
+        
+      </div>
+      <div>
+        <form onsubmit="return false">
+          <table>
+            <tr>
+              <td>Discontinuity Strike:</td>
+              <td>Discontinuity Dip:</td>
+              <td>Slope Strike:</td>
+              <td>Slope Dip:</td>
+              <td>friction angle:</tr>
+            </tr>
+            <tr>
+              <td><input type="number" name="d_strike" id="d_strike" required></td>
+              <td><input type="number" name="d_dip" id="d_dip" required></td>
+              <td><input type="number" name="s_strike" id="s_strike" required></td>
+              <td><input type="number" name="s_dip" id="s_dip" required></td>
+              <td><input type="number" name="f_angle" id="f_angle" required></td>
+            </tr>
+          </table>
+          <button onclick="getVals(document.getElementById('d_strike').value,document.getElementById('s_strike').value, document.getElementById('d_dip').value, document.getElementById('s_dip').value, document.getElementById('f_angle').value)">Process</button>
+        </form>
+      </div>
+      
+    </div>
+    <div id="f_text">
+      <h4 id="f_text"></h4>
+    </div>
+  </body>
+</html>

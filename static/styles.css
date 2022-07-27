@@ -1,0 +1,41 @@
+
+
+body {
+  
+  background-color: #e7eff9;
+  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+  background-attachment: fixed;
+}
+
+
+
+h1{
+  text-align: center;
+  padding: 50px;
+}
+
+.wrapper{
+  margin: auto;
+  /*width: 50%;*/
+  padding: 10px;
+}
+
+.box {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+h4{
+  text-align: center;
+  padding: 50px;
+}
+table, th, td {
+  margin: 10px;
+  padding: 10px;
+}
+
+button{
+  margin: 20px;
+}
+
